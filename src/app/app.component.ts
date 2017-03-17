@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Platform, MenuController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
+import { ConnectionService } from '../providers/connection-service';
 
 import { HomePage } from '../pages/home/home';
 import { MenuTestPage } from '../pages/menu-test/menu-test';
