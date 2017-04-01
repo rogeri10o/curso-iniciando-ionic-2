@@ -1,0 +1,47 @@
+<!--
+  Generated template for the ToolbarTest page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="novos">
+        Novos
+      </ion-segment-button>
+      <ion-segment-button value="noticias">
+        Notícias
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <ion-toolbar color="secondary">
+    <ion-searchbar [(ngModel)]="search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="segment">
+    <ion-list *ngSwitchCase="'novos'">
+      <ion-item>Novo 1</ion-item>
+      <ion-item>Novo 2</ion-item>
+      <ion-item>Novo 3</ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'noticias'">
+      <ion-item>Notícia 1</ion-item>
+      <ion-item>Notícia 2</ion-item>
+      <ion-item>Notícia 3</ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="danger">
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
